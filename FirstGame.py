@@ -17,19 +17,19 @@ vel=20
 
 run = True
 while run:
-    pygame.time.delay(100)
+    pygame.time.delay(10)
     for event in pygame.event.get():
         if event.type==pygame.QUIT:
             run=False
     keys=pygame.key.get_pressed()
-    if keys[pygame.K_LEFT]  and x > vel :
+    if keys[pygame.K_LEFT] and x > vel:
         x-= vel
-    if keys[pygame.K_RIGHT] and x < 500 - width - vel :
+    if keys[pygame.K_RIGHT] and x < 500 - width - vel:
         x+=vel
     if not(isjump):
-        if keys[pygame.K_UP]    and y > vel:
+        if keys[pygame.K_UP] and y > vel:
             y-=vel
-        if keys[pygame.K_DOWN]  and y < 500 - height - vel:
+        if keys[pygame.K_DOWN] and y < 500 - height - vel:
             y+=vel
         if keys[pygame.K_SPACE]:
             isjump = True
